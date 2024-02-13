@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main()
+{
+    char str[20];
+    int i=0,cc=0,cv=0,cd=0,cs=0;
+    printf("\nInput a name: ");
+    scanf("%s",str);
+   while(str[i]!='\0')
+   {
+    if((str[i]>=65 && str[i]<=90)||(str[i]>=97 && str[i]<=122))
+    {
+        if(str[i]=='a'||str[i]=='e'||str[i]=='i'||str[i]=='o'||str[i]=='u'||str[i]=='A'||str[i]=='E'||str[i]=='I'||str[i]=='O'||str[i]=='U')
+        cv++;
+        else
+        cc++;
+   }
+   else if(str[i]>=48 && str[i]<=57)
+   cd++;
+   else
+   cs++;
+   i++;
+   }
+    printf("\nVowels:%d\nConsonants:%d\nDigits:%d\nSpecial chgaracater:%d\n",cv,cc,cd,cs);
+    return 0;
+}
