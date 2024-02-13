@@ -1,0 +1,33 @@
+#include<stdio.h>
+void pal(int);
+int main()
+{
+    int n,a[100],i;
+    printf("\nEnter number of array elements: ");
+    scanf("%d",&n);
+    printf("\nEnter array elements: ");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+        pal(a[i]);
+    }
+    return 0;
+}
+void pal(int n)
+{
+    int rem, rev=0,m;
+    m=n;
+    while(n!=0)
+    {
+        rem=n%10;
+        rev=rev*10+rem;
+        n=n/10;
+    }
+    if(m==rev)
+    {
+        printf("%d is a palindrome number\n",m);
+    }
+}
