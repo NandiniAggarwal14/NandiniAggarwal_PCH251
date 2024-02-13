@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+char str[40];
+int l=0,i=0;
+printf("\nEnter a string: ");
+fgets(str,40,stdin);
+while(str[i]!='\0')
+{
+l++;
+i++;
+}
+l=l-1;//will show an extra count due to addition of new line character
+printf("\nThe length of string is %d",l);
+return 0;
+}
