@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{
+    char str[40];
+    int i=0,l=0;
+    printf("\nInput a name: ");
+    scanf("%s",str);
+    while(str[i]!='\0')
+    {
+        l++;
+        i++;
+    }
+    printf("\nThe length of string is: %d",l);
+    return 0;
+}
