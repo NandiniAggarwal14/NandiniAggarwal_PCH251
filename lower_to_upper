@@ -1,0 +1,19 @@
+#include<stdio.h>
+int main()
+{
+char str[40];
+int i=0;
+printf("\nEnter a string: ");
+fgets(str,40,stdin);
+while(str[i]!='\0')
+{
+if(str[i]>=97 && str[i]<=122)
+{
+str[i]=str[i]-32;
+}
+i++;
+}
+printf("\nThe new string is: ");
+puts(str);
+return 0;
+}
