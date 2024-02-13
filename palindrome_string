@@ -1,0 +1,35 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+char str[40],str1[40];
+int i,j=0,l,tmp,c=0;
+printf("\nEnter a string: ");
+fgets(str,40,stdin);
+l=strlen(str);
+l=l-1;
+for(i=0;i<l;i++)
+{
+str1[j]=str[i];
+j++;
+}
+for(i=0,j=l-1;i<j;i++,j--)
+{
+tmp=str[i];
+str[i]=str[j];
+str[j]=tmp;
+}
+for(i=0,j=0;i<l;i++,j++)
+{
+if(str[i]!=str1[j])
+{
+c=1;
+break;
+}
+}
+if(c==0)
+printf("\nPalindrome");
+else
+printf("\nNot palindrome");
+return 0;
+}
