@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main()
+{
+int a[10][10],m,n,i,j;
+float sum=0,avg=0.00;
+printf("\nEnter the  number of rows and columns: ");
+scanf("%d%d",&m,&n);
+printf("\nEnter array elements: ");
+for(i=0;i<m;i++)
+{
+for(j=0;j<n;j++)
+{
+scanf("%d",&a[i][j]);
+}
+}
+for(i=0;i<m;i++)
+{
+for(j=0;j<n;j++)
+{
+sum=sum+a[i][j];
+}
+}
+avg=sum/(m*n);
+printf("\nSum of array elements is %0.2f and average is %0.2f",sum,avg);
+return 0;
+}
