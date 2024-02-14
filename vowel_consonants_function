@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<string.h>
+void vowel_consonants(char []);
+int main()
+{
+char str[40];
+printf("\nInput a string: ");
+fgets(str,40,stdin);;
+vowel_consonants(str);
+return 0;
+}
+void vowel_consonants(char str[])
+{
+int i=0,cv=0,cc=0;
+while(str[i]!='\0')
+{
+if((str[i]>=65 && str[i]<=90) || (str[i]>=97 && str[i]<=122))
+{
+if(str[i]=='a' || str[i]=='e' || str[i]=='i' || str[i]=='o' || str[i]=='u' || str[i]=='A' || str[i]=='E' || str[i]=='I' || str[i]=='O' || str[i]=='U' )
+cv++;
+else
+cc++;
+}
+i++;
+}
+printf("\nThe number of vowels is %d and consonants is %d ",cv,cc);
+}
