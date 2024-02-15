@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+char str[40],n;
+int i=0,c=0,f=0;
+printf("\nInput a string: ");
+fgets(str,40,stdin);;
+printf("\nEnter searching character : ");
+scanf("%c",&n);
+while(str[i]!='\0')
+{
+if(str[i]==n)
+{
+f=1;
+c=i;
+printf("Element found at place %d\n",c);
+}
+i++;
+}
+if(f==0)
+printf("\nElement not found");
+return 0;
+}
