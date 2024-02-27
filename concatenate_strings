@@ -1,0 +1,21 @@
+#include<string.h>
+#include <stdio.h>
+int main()
+{
+    int a,j,l,c;
+    char s[20],st[20],i;
+    printf("Enter first string\n");
+    fgets(s,20,stdin);
+    l=strlen(s);
+    printf("Enter second string\n");
+    fgets(st,20,stdin);
+    s[l]=' ';
+    for(i=0;st[i]!='\0';i++)
+    {
+        s[l+i]=st[i];
+    }
+    s[l+i]='\0';
+    printf("New string formed is \n");
+    puts(s);
+    return 0;
+}
