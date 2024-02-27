@@ -3,14 +3,15 @@
 int main()
 {
     int a,j;
-    char s[20],i;
+    char s[20],i,l;
     printf("Enter string\n");
     gets(s);
+    l=strlen(s);
     for(i='a';i<='z';i++)
     {
         a=0;
         j=0;
-        while(j<=strlen(s))
+        while(j<=l)
         {
         if(s[j]==i)
         a++;
