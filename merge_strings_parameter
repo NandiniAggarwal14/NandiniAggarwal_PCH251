@@ -1,0 +1,27 @@
+#include<string.h>
+#include <stdio.h>
+void merge(char [],char [],int,int);
+int main()
+{
+    int l1,j=0,l2,i;
+    char s[20],st[20],p;
+    printf("Enter first string\n");
+    fgets(s,20,stdin);
+    l1=strlen(s);
+    printf("Enter second string\n");
+    fgets(st,20,stdin);
+    l2=strlen(st);
+    merge(s,st,l1,l2);
+    return 0;
+}
+void merge(char s[],char st[],int l1,int l2)
+{
+    int i;
+     for(i=0;i<l2;i++)
+    {
+       s[i+l1]=st[i];
+    }
+    s[i+l1]='\0';
+    printf("new string formed is \n");
+    puts(s);
+}
