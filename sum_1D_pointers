@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main()
+{
+    int a[10],s=0,*p,n,i;
+    printf("Enter size of array\n");
+    scanf("%d",&n);
+    printf("Enter array elements\n");
+    for(i=0;i<n;i++)
+    scanf("%d",&a[i]);
+    for(i=0;i<n;i++)
+    {
+        p=&a[i];
+        s=s+*p;
+    }
+    printf("sum of array elements are \n");
+    printf("%d",s);
+    return 0;
+}
