@@ -2,8 +2,8 @@
 #include<stdio.h>
 int main()
 {
-    int a,j;
-    char s[20],i,l;
+    int a,j,l;
+    char s[20],i;
     printf("Enter string\n");
     gets(s);
     l=strlen(s);
