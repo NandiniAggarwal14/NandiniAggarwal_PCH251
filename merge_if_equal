@@ -1,0 +1,26 @@
+#include<string.h>
+#include <stdio.h>
+int main()
+{
+    int a,j,l1,l2,c;
+    char s[20],st[20],i;
+    printf("Enter first string\n");
+    fgets(s,20,stdin);
+    l1=strlen(s);
+    printf("Enter second string\n");
+    fgets(st,20,stdin);
+    l2=strlen(st);
+    if(l1!=l2)
+    printf("Both strings are not equal");
+    else
+    {
+    for(i=0;st[i]!='\0';i++)
+    {
+       s[i+l1]=st[i];
+    }
+    s[i+l1]='\0';
+    printf("new string formed is \n");
+    puts(s);
+    }
+    return 0;
+}
