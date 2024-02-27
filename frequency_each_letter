@@ -1,0 +1,23 @@
+#include<string.h>
+#include<stdio.h>
+int main()
+{
+    int a,j;
+    char s[20],i;
+    printf("Enter string\n");
+    gets(s);
+    for(i='a';i<='z';i++)
+    {
+        a=0;
+        j=0;
+        while(j<=strlen(s))
+        {
+        if(s[j]==i)
+        a++;
+        j++;
+        }
+        if(a!=0)
+        printf("frequency of %c = %d\n",i,a);
+    }
+    return 0;
+}
