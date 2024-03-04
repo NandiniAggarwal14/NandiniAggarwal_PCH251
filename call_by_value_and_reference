@@ -1,0 +1,27 @@
+#include<stdio.h>
+void callbyvalue(int, int);
+void callbyreference(int *, int *);
+int main()
+{
+    int a,b;
+    printf("\nEnter two numbers : ");
+    scanf("%d%d",&a,&b);
+    printf("\nSwapping using call by value");
+    callbyvalue(a,b);
+    callbyreference(&a,&b);
+    printf("\nSwapping using call by reference: %d and %d",a,b); 
+    return 0;   
+}
+void callbyvalue(int a ,int b)
+{
+    int c=a;
+    a=b;
+    b=c;
+    printf("\n%d and %d",a,b);
+}
+void callbyreference(int *n1, int *n2)
+{
+    int c=*n1;
+    *n1=*n2;
+    *n2=c;
+}
