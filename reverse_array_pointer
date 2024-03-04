@@ -1,0 +1,31 @@
+#include<stdio.h>
+void reverse(int *, int);
+int main()
+{
+    int a[10],n,i,*p;
+    printf("\nEnter size : ");
+    scanf("%d",&n);
+    p=a;
+    printf("\nEnter array elements: ");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",(p+i));
+    }
+    reverse(p,n);
+    printf("\nReversed array elements are: ");
+    for(i=0;i<n;i++)
+    {
+        printf("%d\n",*(p+i));
+    }
+    return 0;   
+}
+void reverse(int *p, int n)
+{
+    int i,tmp;
+    for(i=0;i<n/2;i++)
+    {
+         tmp=*(p+i);
+        *(p+i)=*(p+(n-i-1));
+        *(p+(n-i-1))=tmp;
+    }
+}
