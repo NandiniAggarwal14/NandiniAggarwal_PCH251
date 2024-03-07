@@ -1,0 +1,48 @@
+#include<stdio.h>
+#include<string.h>
+void merge(char *, char *,int ,int);
+int main()
+{
+char s[40],str[40];
+int l1,l2,i,f=0;
+printf("\nEnter first string: ");
+fgets(s,40,stdin);
+printf("\nEnter second string: ");
+fgets(str,40,stdin);
+l1=strlen(s)-1;
+l2=strlen(str)-1;
+if(l1!=l2)
+f=1;
+//printf("\nStrings are unequal");
+else
+{
+    for(i=0;i<l1;i++)
+    {
+        if(str[i]!=s[i])
+       {
+        f=1;
+        break;
+       }
+    }
+}
+if(f==1)
+printf("\nStrings are unequal");
+else
+merge(s,str,l1,l2);
+return 0;
+}
+void merge(char *p1, char *p2,int l1,int l2)
+{
+int i=0;
+*(p1+l1)=' ';
+while(*(p2+i)!='\0')
+{
+*((p1+l1)+1)=*(p2+i);
+l1++;
+i++;
+}
+*(p1+l1)='\0';
+printf("\nString after merging is : ");
+for(i=0;i<l1;i++)
+printf("%c",*(p1+i));
+}
