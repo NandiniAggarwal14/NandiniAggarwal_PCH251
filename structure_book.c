@@ -19,8 +19,8 @@ scanf(" %[^\n]",b[i].author);
 printf("\nInput the price of book %d: ",i+1);
 scanf("%f",&b[i].price);
 }
-sm=b[0].price;
-lg=b[0].price;
+sm=0;
+lg=0;
 for(i=0;i<n;i++)
 {
 if(b[i].price>lg)
