@@ -13,10 +13,8 @@ scanf("%d",&n);
 for(i=0;i<n;i++)
 {
 printf("\nInput the name of the book %d:",i+1);
-//fgets(b[i].title,40,stdin);
 scanf(" %[^\n]",b[i].title);
 printf("\nInput the author of book %d: ",i+1);
-//fgets(b[i].author,40,stdin);
 scanf(" %[^\n]",b[i].author);
 printf("\nInput the price of book %d: ",i+1);
 scanf("%f",&b[i].price);
